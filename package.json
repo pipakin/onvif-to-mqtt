@@ -1,0 +1,30 @@
+{
+  "name": "onvif-ptz-to-mqtt",
+  "version": "1.0.0",
+  "description": "Do some onvif stuff",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && docker build -t berkin/onvif-ptz-to-mqtt .",
+    "start-only": "node public/index.js",
+    "start": "tsc && node public/index.js",
+    "test": "mocha"
+  },
+  "author": "Philip Kin",
+  "license": "MIT",
+  "devDependencies": {
+    "@tsconfig/node12": "^1.0.9",
+    "@types/lodash": "^4.14.172",
+    "@types/node": "^16.7.10",
+    "@types/superagent": "^4.1.12",
+    "@types/xml2js": "^0.4.9",
+    "typescript": "^4.4.2"
+  },
+  "dependencies": {
+    "async-mqtt": "^2.6.1",
+    "lodash": "^4.17.21",
+    "onvif": "^0.6.5",
+    "superagent": "^6.1.0",
+    "winston": "^3.3.3",
+    "xml2js": "^0.4.23"
+  }
+}
